@@ -11,8 +11,18 @@ export const apiInterface = (apiData) => {
         } else {
             bookData.imgURL = "";
         }
-        bookData.author = book.volumeInfo.authors[0];
-        bookData.description = book.volumeInfo.description;
+
+        if (book.volumeInfo.authors !== undefined) {
+            bookData.author = book.volumeInfo.authors[0];
+        } else {
+            bookData.author = "Author Information not available";
+        }
+
+        if (book.volumeInfo.description !== undefined) {
+            bookData.description = book.volumeInfo.description;
+        } else {
+            bookData.description = "Description not available";
+        }
         bookData.title = book.volumeInfo.title;
 
         return bookData;

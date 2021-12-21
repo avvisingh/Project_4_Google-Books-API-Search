@@ -31,8 +31,8 @@ let BookGrid = () => {
     let returnVal;
 
     if (currData.length) {
-        returnVal = currData.map((book) => {
-            return <BookCard currData={book} />;
+        returnVal = currData.map((book, i) => {
+            return <BookCard key={i} currData={book} />;
         });
     } else {
         returnVal = (
