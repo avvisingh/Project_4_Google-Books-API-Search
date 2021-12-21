@@ -1,4 +1,5 @@
 import BookCard from "../../Component/BookCard";
+import styles from "./BookGrid.module.scss";
 import { useState, useEffect, useContext } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import { fetchAPI } from "../../assets/utils/api-fetch";
@@ -44,8 +45,7 @@ let BookGrid = () => {
 
     return (
         <>
-            <h1>Work in Progress</h1>
-            {returnVal}
+            <div className={styles["book-grid"]}>{returnVal}</div>
         </>
     );
 };

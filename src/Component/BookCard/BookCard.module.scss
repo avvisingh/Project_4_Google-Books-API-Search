@@ -1,0 +1,15 @@
+.card-container {
+    margin: 5px 30px;
+    width: 200px;
+    height: 600px;
+    align-items: space-evenly;
+    justify-content: center;
+
+    &--description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: small;
+        word-break: break-all;
+    }
+}
