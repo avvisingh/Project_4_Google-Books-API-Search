@@ -1,13 +1,14 @@
 import SearchForm from "../../Component/SearchForm";
-import BookCard from "../../Component/BookCard";
+import SearchProvider from "../../context/SearchContext";
+import BookGrid from "../BookGrid";
 
 let MainPage = () => {
     return (
         <div>
-            {/* <SearchProvider> */}
-            <SearchForm />
-            <BookCard />
-            {/* </SearchProvider> */}
+            <SearchProvider>
+                <SearchForm />
+                <BookGrid />
+            </SearchProvider>
         </div>
     );
 };

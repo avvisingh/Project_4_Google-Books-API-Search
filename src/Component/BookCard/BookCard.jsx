@@ -1,10 +1,10 @@
-let BookCard = () => {
+let BookCard = ({currData}) => {
     return (
         <div>
-            <img></img>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+            <p>{currData.imgURL ? currData.imgURL : "no image available"}</p>
+            <h3>{currData.title}</h3>
+            <h4>{currData.author}</h4>
+            <p>{currData.description}</p>
         </div>
     );
 };
